@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workshop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: lewap
+        image: lewap/workshop-app:0.0.2
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "125Mi"
+            cpu: "150m"
+          limits:
+            memory: "250Mi"
+            cpu: "300m"
+        readinessProbe:
+          httpGet:
+            path: /busy
+            port: 9001
+          initialDelaySeconds: 2
+          periodSeconds: 2
+        env:
+        - name: PORT
+          value: "9001"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 9001
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+

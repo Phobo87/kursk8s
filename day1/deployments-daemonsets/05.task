@@ -1,0 +1,5 @@
+Check if all pods are bound to 8080 port (make temporary pod and check connections to all 3 pods).
+Rollback to different version
+Check rollout status
+
+Check if all pods are bound to 8080 port (make temporary pod and check connections to all 3 pods).

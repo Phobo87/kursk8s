@@ -1,0 +1,5 @@
+Have a look at given pod (yaml) which mounts config map as volume.
+Change mount path to /etc/config
+Apply pod
+Exec into pod and check /etc/config directory
+

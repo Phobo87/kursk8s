@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-best-pod3
+  labels:
+    app: busy-app
+    app2: busy-app2
+spec:
+  restartPolicy: Never
+  containers:
+  - name: busybox
+    image: busybox:latest
+    command: ['sh', '-c', 'echo "Hello from sleepy box2!" && sleep 10']
+

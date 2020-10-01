@@ -1,0 +1,17 @@
+# create busybox with curl to test connection
+k run bbc --restart Never --image radial/busyboxplus:curl --command -- /bin/sh -c "sleep 1000000"
+
+
+# retrieve IP addresses
+k get po -l app=workshop -o wide
+
+
+# check connections - GET /
+k exec -it bbc -- sh
+curl <IP>:8080
+
+
+# Rollback and rollout status
+k rollout undo deploy <name> --to-revision <number>
+k rollout statsu deploy <name>
+

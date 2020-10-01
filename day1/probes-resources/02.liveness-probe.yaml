@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: liveness-pod
+spec:
+  containers:
+  - name: bb
+    image: busybox
+    command: ["sh", "-c", "echo qwerty && sleep 3600"]
+    livenessProbe:
+      exec:
+        command: ["echo", "testing"]
+      initialDelaySeconds: 5
+      periodSeconds: 5
+

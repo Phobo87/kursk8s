@@ -1,0 +1,28 @@
+# editing deployment
+k edit deploy nginx-01
+# or edit yaml file and apply changes
+
+
+# watch rollout status
+k rollout status deploy nginx-01
+
+
+# Display all deployments
+k get deploy
+
+
+# Display all replica sets
+k get rs
+
+
+# View rollout history
+k rollout history deploy nginx-01
+
+
+# Undo deployment
+k rollout undo deploy nginx-01
+
+
+# Undo to specific version
+k rollout undo deploy nginx-01 --to-revision <number>
+

@@ -1,0 +1,26 @@
+Edit nginx deployment - set image to 1.18
+Watch rollout status
+Display all deployments
+Display all replica sets
+
+Change nginx deployment image to 1.14.2
+Watch rollout status
+Display all deployments
+Display all replica sets
+View rollout history
+
+Change nginx deployment image to 1.19
+Watch rollout status
+Display all deployments
+Display all replica sets
+View rollout history
+
+Undo nginx deployment (1 change back)
+Watch rollout status
+Display all deployments
+Display all replica sets
+View rollout history
+
+How many replicasets are there?
+Rollout to specific version
+

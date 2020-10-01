@@ -1,0 +1,4 @@
+File 02.config contains haproxy configuration (you don't need to edit this file) which maps port 9000 to 80.
+Create pod with 2 containers inside (nginx:1.14.2 and haproxy:1.7)
+Haproxy container should contain haproxy config in /usr/local/etc/haproxy/haproxy.cfg
+Test whether you can connect to nginx via 9000 port (haproxy should then forward traffic on port 9000 to nginx port 80 - ambassador pattern)

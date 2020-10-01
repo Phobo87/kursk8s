@@ -1,0 +1,8 @@
+cat 07.pod.cm-volume.yaml
+Edit yaml - solution showed in file 07.solution.yaml
+k apply -f <filename>
+k exec -it bb-07 -- /bin/sh
+ls /etc/config
+...
+exit
+

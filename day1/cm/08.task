@@ -1,0 +1,3 @@
+Create config map:
+- config map should have single key named 'config'
+- 08.config.properties file content should be value for 'config' key (value will be represented as a multi-line string)

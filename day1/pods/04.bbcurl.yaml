@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: bbcurl
+  name: bbcurl
+spec:
+  containers:
+  - image: radial/busyboxplus:curl
+    name: bbcurl
+    command:
+    - /bin/sh
+    - -c
+    - sleep 1000
+  restartPolicy: Never
+

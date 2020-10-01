@@ -1,0 +1,4 @@
+Add 'COUNTRY' env variable and echo it in a command (similar to NAME and COLOR).
+Display pod logs.
+Display all env variables from running pod (from single container inside).
+

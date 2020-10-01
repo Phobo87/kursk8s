@@ -1,0 +1,2 @@
+Mount config map created from config file as a volume to busybox pod
+Config should be put at /etc/conf/config.properties inside the pod

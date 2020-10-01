@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: workshop
+  name: workshop
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: workshop
+  template:
+    metadata:
+      labels:
+        app: workshop
+    spec:
+      containers:
+      - image: lewap/workshop-app:0.0.2
+        name: workshop-app
+        resources:
+          requests:
+            memory: "125Mi"
+            cpu: "150m"
+          limits:
+            memory: "250Mi"
+            cpu: "300m"
+        readinessProbe:
+          httpGet:
+            path: /busy
+            port: 8080
+          initialDelaySeconds: 2
+          periodSeconds: 2
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+

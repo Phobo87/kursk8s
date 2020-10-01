@@ -1,0 +1,9 @@
+Exec into container
+Check if directory /tmp/vol1 exists
+Add empty file named 'test' in /tmp/vol1
+Add empty file test2 in in ~ (home directory)
+Exit from pod
+Exec to pod again and check if test and test2 are still present
+Delete pod
+Start the pod again
+Exec to pod again and check if test and test2 are still present

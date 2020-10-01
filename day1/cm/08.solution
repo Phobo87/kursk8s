@@ -1,0 +1,4 @@
+k create cm config --from-file 08.config.properties -o yaml --dry-run
+k create cm config --from-file config=08.config.properties -o yaml --dry-run
+k create cm config --from-file config=08.config.properties -o yaml --dry-run > configmap.yaml
+k apply -f configmap.yaml

@@ -1,0 +1,6 @@
+k get deploy
+k describe deploy nginx-01
+k get rs
+k describe rs <name>
+kubectl get po -l <key=val>
+

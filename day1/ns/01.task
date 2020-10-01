@@ -1,0 +1,4 @@
+Display all namespaces in the cluster
+Get nodes from your namespace
+Create new namespace with name <you-current-namespace>-2
+Check if the default token was created in the namespace (k get secret -n <namespace>)

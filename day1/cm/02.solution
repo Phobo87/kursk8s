@@ -1,0 +1,4 @@
+k apply -f 02.pod.yaml
+k logs bb-02
+k exec bb-02 -- env
+

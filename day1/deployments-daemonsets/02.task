@@ -1,0 +1,6 @@
+Display all deployments
+Describe nginx deployment
+Display all replica sets
+Describe nginx relica set
+Display pods manager by nginx replica set
+

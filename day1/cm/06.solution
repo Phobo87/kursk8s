@@ -1,0 +1,19 @@
+k exec -it bb-05 -- /bin/sh
+cd /tmp
+ls
+cd vol1
+touch /tmp/vol1//test
+touch ~/test2
+exit
+
+k exec -it bb-05 -- /bin/sh
+ls /tmp/vol1
+ls ~
+exit
+
+k delete po bb-05
+k apply -f 05.pod-volume.yam
+k exec -it bb-05 -- /bin/sh
+ls /tmp/vol1
+ls ~
+

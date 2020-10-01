@@ -1,0 +1,1 @@
+Main key in previously created configmap should be changed to 'config.properties'

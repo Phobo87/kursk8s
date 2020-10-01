@@ -1,0 +1,2 @@
+Add country to the existing config map.
+Read COLOR and COUNTRY from config map.

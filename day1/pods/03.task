@@ -1,0 +1,3 @@
+Edit pod, desrease sleep to 10 seconds
+Add 'restartPolicy: Never' to the pod
+Apply changes

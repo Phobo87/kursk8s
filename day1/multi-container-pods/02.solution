@@ -1,0 +1,6 @@
+k create cm haproxy-cm --from-file haproxy.cfg=02.config
+k describe cm haproxy-cm
+// create multi-container pod - solution in yaml file
+
+// Test if you can access nginx on port 9000 (through haproxy)
+k run bbc -it --rm --restart Never --image busybox -- wget -O- <ip>:9000

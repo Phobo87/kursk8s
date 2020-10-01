@@ -1,0 +1,9 @@
+Create deployment named workshop
+Deployment should run 3 replicas of lewap/workshop-app:0.0.2
+The only container should request "125Mi" memory and "150m" CPU
+The only container should use maximum "250Mi" memory and "300m" CPU
+Container should not accept traffic if GET /busy endpoint returns status code != 2xx
+Container should be restarted if GET /health endpoint returns status code != 2xx
+
+Run deployment
+
