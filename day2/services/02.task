@@ -1,0 +1,5 @@
+Display all services in the cluster
+Check if nginx is accessible from inside the cluster by name and by ip.
+Describe nginx service
+Check service endpoints
+

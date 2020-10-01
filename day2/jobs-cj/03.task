@@ -1,0 +1,8 @@
+Create 2 pods with mounted volume to hostPath (same as cronjob created before).
+Pods should be named po-writer and po-reader
+Make sure cronjob and 2 pods run on the same k8s worker
+po-writer should append current date to mounted file every 2 sec
+po-reader should echo 3 starting lines from that file along with number of lines from that file every 4 sec
+
+Follow logs from po-reader (-f flag) // kubectl logs <pod-name> -f
+

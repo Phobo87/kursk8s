@@ -1,0 +1,5 @@
+Create cronjob which cleans /mnt/f1 file on the node where it is executed (1 indicates namespace - replace 1 with your namespace number)
+If file does not exist, it should be created on the host
+Cronjob should run once every 5 minutes
+Cronjob should run on the same node every time it is executed (hint: nodeName)
+

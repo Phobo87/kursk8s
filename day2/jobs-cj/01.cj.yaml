@@ -1,0 +1,16 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: date-cronjob
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: bb-01
+            image: busybox
+            command: [/bin/sh, -c, "date; sleep 15"]
+          restartPolicy: OnFailure
+

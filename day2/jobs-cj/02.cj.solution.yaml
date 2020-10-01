@@ -1,0 +1,25 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: truncate-cronjob
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          nodeName: k8s-092020-3t9aw
+          containers:
+          - name: bb
+            image: busybox
+            command: [/bin/sh, -c, "truncate -s 0 /dir/f.txt; sleep 15"]
+            volumeMounts:
+            - mountPath: /dir/f.txt
+              name: v1
+          restartPolicy: OnFailure
+          volumes:
+          - name: v1
+            hostPath:
+              path: /mnt/f14 # put your namespace number after 'f'
+              type: FileOrCreate
+

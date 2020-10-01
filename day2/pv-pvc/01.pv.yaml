@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-01-ns14
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 512Mi
+  accessModes:
+  - ReadWriteOnce
+  hostPath:
+    path: /mnt/storage
+

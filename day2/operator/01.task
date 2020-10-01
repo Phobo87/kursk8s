@@ -1,0 +1,5 @@
+git clone https://github.com/zalando/postgres-operator.git
+helm install postgres-operator ./charts/postgres-operator
+// helm install postgres-operator ./charts/postgres-operator -f ./charts/postgres-operator/values-crd.yaml
+kubectl create -f manifests/minimal-postgres-manifest.yaml
+

@@ -1,0 +1,2 @@
+kubectl describe pv pv-01
+kubectl describe pvc pvc-01

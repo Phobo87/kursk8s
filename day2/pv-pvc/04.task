@@ -1,0 +1,2 @@
+Run your pod on a specific node (by name) // add nodeName to pod spec
+

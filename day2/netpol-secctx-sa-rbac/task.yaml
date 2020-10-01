@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2020-09-28T12:52:45Z"
+  labels:
+    run: bbc
+    allow-access: "true"
+  name: bbc
+  namespace: ns14
+  resourceVersion: "48065"
+  selfLink: /api/v1/namespaces/ns14/pods/bbc
+  uid: 126a2747-9c1d-4410-b5df-52c5ee7f1915
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - sleep 1000000
+    image: radial/busyboxplus:curl
+    imagePullPolicy: IfNotPresent
+    name: bbc
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-c6pv5
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: k8s-092020-3t9aw
+  priority: 0
+  restartPolicy: Never
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-c6pv5
+    secret:
+      defaultMode: 420
+      secretName: default-token-c6pv5

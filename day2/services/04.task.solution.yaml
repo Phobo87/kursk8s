@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: workshop-svc-04
+  name: svc-04
+spec:
+  type: NodePort
+  ports:
+  - port: 9010
+    protocol: TCP
+  selector:
+    app: workshop-app
+

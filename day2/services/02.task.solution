@@ -1,0 +1,4 @@
+k get svc -A
+call curl from busybox
+kubectl describe svc svc-01
+kubectl get endpoints svc-01

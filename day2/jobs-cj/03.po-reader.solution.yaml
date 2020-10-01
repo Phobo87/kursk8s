@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: po-03-reader
+spec:
+  nodeName: k8s-092020-3t9aw
+  containers:
+  - name: bb
+    image: busybox
+    command: [/bin/sh, -c, "while true; do echo ---; cat /dir/f.txt | head -3; cat /dir/f.txt | wc -l; sleep 4; done"]
+    volumeMounts:
+    - mountPath: /dir/f.txt
+      name: v1
+  restartPolicy: OnFailure
+  volumes:
+  - name: v1
+    hostPath:
+      path: /mnt/f14 # put your namespace number after 'f'
+      type: FileOrCreate
+

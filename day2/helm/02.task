@@ -1,0 +1,13 @@
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm search repo bitnami
+helm repo update
+helm fetch bitnami/redis
+// untar and cd
+// view all files + explanation
+helm install redis -f values.yaml .
+
+exec into redis-master
+redis-cli -a <pass>
+set a 100
+get a
+

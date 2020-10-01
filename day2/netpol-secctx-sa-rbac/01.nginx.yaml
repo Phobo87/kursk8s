@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: netpol-pod
+  name: netpol-nginx-01
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    ports:
+    - containerPort: 80
+  restartPolicy: Always
+

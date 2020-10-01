@@ -1,0 +1,7 @@
+Create cluster ip service exposing warkshop-app deployment on port 9010
+Check if service is working (curl the service)
+Edit workshop-app deployment and set readiness probe failureThreshold to 1
+
+Watch endpoints (k get ep -w)
+Watch pods (k get po -w)
+
